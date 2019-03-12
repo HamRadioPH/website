@@ -83,3 +83,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+excerpt_max:
+  featured: 30

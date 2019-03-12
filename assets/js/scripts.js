@@ -13,17 +13,15 @@
                 $(this).css('width','95%');
             }
         });
+    });
 
+    $(window).scroll(function(){
+        if($('#comments').length > 0){
+            if ($('#comments').scrollTop() < $(window).innerHeight()) {
+                var js = document.createElement('script');
+                js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=822714894740746&version=v3.2&autoLogAppEvents=1';
+                document.body.appendChild(js);
+            }             
+        }
     });
 })(jQuery);
-
-
-window.onscroll = function () {
-    var rect = document.getElementById('comments').getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-        var js = document.createElement('script');
-        js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=822714894740746&version=v3.2&autoLogAppEvents=1';
-        document.body.appendChild(js);
-        window.onscroll = null;
-    } 
-}

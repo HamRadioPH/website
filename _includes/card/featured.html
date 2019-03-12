@@ -10,16 +10,6 @@
             <a class="text-dark" href="{{ post.url }}">{{ post.title }}</a>
         </h3>
         <div class="post-date mt-1 mb-2">{{ post.date | date: "%-d %b %Y" }}</div>
-        <div class="post-content card-text mb-auto">
-            <p>
-                {% if post.description.size > site.excerpt_max.featured %}
-                    {{ post.description | slice: 0, site.excerpt_max.featured }}...
-                {% else %}
-                    {{ post.description }}
-                {% endif %} 
-            </p>
-        </div>
-
         <a class="post-more btn-sm btn btn-outline-danger" href="{{ post.url }}">Continue reading</a>
     </div>
     {% if post.thumbnail %}
@@ -28,9 +18,8 @@
         {% assign thumbnail = '/assets/img/post.png' %}
     {% endif %}
     <div class="post-image card-img-right flex-auto d-none d-md-block">
-        <img class="" alt="{{ post.title }}" style="width: 200px; height: 250px;" src="{{ thumbnail }}" />
-    </div>
-    
+        <img src="{{ thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+    </div>    
 </div>
 <!--
 <div class="post-card bg-light mb-4">

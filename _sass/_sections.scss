@@ -51,15 +51,19 @@ header.tron{
     }
 }
 
+
 .featured{
     .post{
         .post-image{
-            max-width: 200px;
+            width: 300px;
             max-height: 250px;
             overflow: hidden;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
             img{
                 height: 100%;
-                width: auto;
+                width: 100%;
             }
         }
         .post-tags{
@@ -115,5 +119,12 @@ header.tron{
         .relcontent{
             padding-left: 0;
         }
+    }
+}
+.comment-wrapper{
+    background: url('/../assets/img/loader.apng') no-repeat 50% 50%;
+    min-height:200px;
+    #comments{
+        background-color:#FFFFFF;
     }
 }
