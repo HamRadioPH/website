@@ -51,6 +51,8 @@ defaults:
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+      header: true
+      is_post: true
 
 # Build settings
 markdown: kramdown

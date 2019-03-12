@@ -1,24 +1,20 @@
 ---
-layout: default
+layout: page
 ---
-{% assign author = site.data.authors[page.author] %}
-
-<h2>{{ page.title }}</h2>
-
-<time datetime="{{ page.date }}">
-  <small>
-    <strong>{{ page.date | date_to_string }}</strong>
-    {% if author %}
-      by {{ author.name }}
+<article class="post">
+    {% include breadcrumbs.html %}
+    <div class="post-content">
+        {{ content }}
+    </div>
+    {% if page.author %}        
+        {% assign author = site.data.authors[page.author] %}    
+        {% if author %}        
+            {% include card/author.html author=author %}
+        {% endif %}
     {% endif %}
-  </small>
-</time>
-
-{% include page-intro.html %}
-
-{{ content }}
-
-<nav aria-label="Adjacent Posts">
+    {% include card/comment.html %}
+</article>
+<!--nav aria-label="Adjacent Posts">
   <ul>
     {% if page.previous.url %}
       <li>
@@ -31,4 +27,4 @@ layout: default
       </li>
     {% endif %}
   </ul>
-</nav>
+</nav-->

@@ -3,7 +3,7 @@ layout: contact
 title: Contact
 permalink: /contact
 section: contact
-intro_paragraph: |-
+description: |-
 
   The contact form on this page uses
   [Netlify Forms](https://www.netlify.com/docs/form-handling/) to process

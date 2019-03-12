@@ -1,9 +1,47 @@
 ---
 layout: default
 ---
-
-<h2>{{ page.title }}</h2>
-
-{% include page-intro.html %}
-
-{{ content }}
+{% if page.header == true and page.title %}
+    {% if page.thumbnail %}
+        {% assign bg = page.thumbnail %}
+    {% else %}
+        {% assign bg = '/assets/img/bg1.jpg' %}
+    {% endif %}
+    <header class="tron">
+        <div class="header-image" style="background-image: url('{{ bg }}');"></div>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <div class="header-meta mb-2">
+                    <h1 class="header-text-bg header-title">{{ page.title }}</h1>
+                </div>
+                {% if page.description %}
+                <div class="header-text mb-2">
+                    <p class="header-text-bg">{{ page.description }}</p>
+                </div>
+                {% endif %}
+                {% if page.date %}
+                <time datetime="{{ page.date }}">
+                      <time datetime="{{ page.date }}" class="header-date header-text-bg">
+                        {% if page.author %}
+                            {% assign author = site.data.authors[page.author] %}    
+                            By {{ author.name }}  / Published on {{ page.date | date: "%-d %b %Y" }}
+                        {% else %}
+                            Published {{ page.date | date: "%-d %b %Y" }}
+                        {% endif %}                        
+                      </time>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+{% endif %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            {{ content }}
+        </div>
+        <div class="col-md-4 sidebar col-sm-12 col-xs-12">
+            {% include sidebar.html %}
+        </div>
+    </div>
+</div>
+<hr />

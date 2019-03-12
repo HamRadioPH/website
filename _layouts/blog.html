@@ -1,33 +1,46 @@
 ---
-layout: default
+layout: page
 ---
-
-<h2>{{ page.title }}</h2>
-
-{% include page-intro.html %}
-
-{{ content }}
-
-<section>
-
-  <h3>Posts</h3>
-
-  <ul>
-    {% for post in site.posts %}
-    {% assign author = site.data.authors[post.author] %}
-      <li>
-        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-        <time datetime="{{ post.date }}">
-          <small>
-            <strong>{{ post.date | date_to_string }}</strong>
-            {% if author %}
-              by {{ author.name }}
+<div class="container">
+    <section class="archive">        
+        {% for category in site.categories %}
+            {% if page.category %}
+                {% if category[0] == page.category %}
+                    {% for post in category[1] %}
+                        {% assign author = site.data.authors[post.author] %}
+                        <div class="post-card pb-4 pb-4">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-12">
+                                    <div class="post-image bg-light rounded mb-4">
+                                        {% if post.thumbnail %}
+                                            {% assign thumbnail = post.thumbnail %}
+                                        {% else %}
+                                            {% assign thumbnail = '/assets/img/post.png' %}
+                                        {% endif %}
+                                        <img class="img-fluid" src="{{ thumbnail }}" alt="{{ post.title }}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-xs-12">
+                                    <div class="post-data">
+                                        <h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                                        <div class="post-description">
+                                            {% if post.description %}
+                                                <p>{{ post.description }}</p>
+                                            {% else %}
+                                                {% if post.excerpt %}
+                                                    {{ post.excerpt }}
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                        <a class="btn btn-outline-danger" href="{{ post.url }}">Continue reading</a>
+                                    </div>
+                                </div>
+                                <hr />
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             {% endif %}
-          </small>
-        </time>
-        {{ post.excerpt | strip_newlines | truncate: 180 }}
-      </li>
-    {% endfor %}
-  </ul>
-
-</section>
+        {% endfor %}
+    </section>
+</div>

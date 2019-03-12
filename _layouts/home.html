@@ -1,23 +1,75 @@
 ---
 layout: default
 ---
-
-<h2>{{ page.title }}</h2>
-
-  {% include page-intro.html %}
-
-  {{ content }}
-
-  <section>
-
-    <h3>Recent posts from the blog</h3>
-
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </section>
+<div class="container pt-4">
+    {% assign latest = site.posts | first %}
+    <div class="no-gutters latest-featured jumbotron text-white rounded bg-dark" style="background-image: url('{{ latest.thumbnail }}')">
+        <div class="col-md-6 px-0">
+            <div class="post-content p-5">
+                <h1 class="display-4 font-italic">{{ latest.title }}</h1>    
+                {% if latest.description %}
+                    <p class="lead my-3">{{ latest.description }}</p>
+                {% else %}
+                    {% if latest.excerpt %}
+                        {{ latest.excerpt }}
+                    {% endif %}
+                {% endif %}
+                
+                <p class="lead mb-0"><a href="{{ latest.url }}?ref=home" class="text-white font-weight-bold">Continue reading...</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-2 featured">
+        {% for post in site.posts offset: 1 limit: 2 %}
+            <div class="col-md-6 col-sm-12">
+                {% assign post = post %}
+                {% include card/featured.html %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <aside class="col-md-8 blog-main">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">From the shack</h3>
+            <div class="archive">
+            {% for post in site.posts offset: 3 %}
+                {% assign author = site.data.people[post.author] %}
+                <div class="post-card pb-4 pb-4">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="post-image bg-light rounded mb-3">
+                                {% if post.thumbnail %}
+                                    <img class="img-fluid" src="{{ post.thumbnail }}" alt="{{ post.title }}" />
+                                {% else %}
+                                    <img class="img-fluid" src="/assets/img/post.png" alt="{{ post.title }}" />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-xs-12">
+                            <div class="post-data">
+                                <h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                                <div class="post-description">
+                                    {% if post.description %}
+                                        <p>{{ post.description }}</p>
+                                    {% else %}
+                                        {% if post.excerpt %}
+                                            {{ post.excerpt }}
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <a href="{{ post.url }}">Continue reading</a>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </aside>
+        <aside class="col-md-4 sidebar">
+            {% include sidebar.html %}
+        </aside>
+    </div>
+</div>
+<hr/>

@@ -1,0 +1,119 @@
+header.tron{
+    position: relative;
+    height: 350px;
+    @include border_radius(0);
+
+    .header-text-bg{
+        background-color:rgba(0,0,0,.7);
+        display: inline-block;
+        padding:5px 10px;
+        word-break: break-all;
+
+    }
+    .header-image{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: grayscale(80%);
+        -webkit-filter: grayscale(80%);
+
+    }
+    .header-wrapper{
+        position: absolute;
+        width: 100%;
+        bottom:0;
+        .header-content{
+            color:#FFFFFF;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding:3rem;
+
+            .header-title{                
+                @media only screen and (max-width: 768px) {
+                    font-size: 1.8rem;
+                }
+            }
+            .header-text{
+                p {
+                    font-size:0.9rem;
+                    margin-bottom:0 !important;
+                    color:rgba(255,255,255,0.6);
+                }
+            }
+            .header-date{
+                font-size:0.7rem;
+            }
+        }
+    }
+}
+
+.featured{
+    .post{
+        .post-image{
+            max-width: 200px;
+            max-height: 250px;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .post-tags{
+            font-size: $featured-post-tags-font-size;
+            text-transform: uppercase;
+        }
+        .post-title{
+            font-size: $featured-post-title-font-size;
+            line-height: 1.3em;
+            max-height: 55px;
+        }
+        .post-date{
+            font-size: $featured-post-date-font-size;
+            color: $featured-post-content-color;
+            text-transform: uppercase;
+        }
+
+        .post-content{
+            font-size: $featured-post-content-font-size;
+            max-height: 70px;
+            color: $featured-post-content-color;
+        }
+        .post-more{
+            text-transform: uppercase;
+        }
+
+    }
+}
+
+.related-posts{
+    .post{
+        display: block;
+        color:#000;
+        .post-image{
+            overflow: hidden;
+            max-height: 150px;
+            img{
+                width: 100%;
+            }
+        }
+        .post-title{
+            margin-bottom: 5px;
+            font-size:.89rem;
+            font-family: $font-sans;
+            font-weight: bold;
+            color:#000;
+        }
+        .post-date{
+            font-size: 0.75rem;
+
+        }
+
+        .relcontent{
+            padding-left: 0;
+        }
+    }
+}

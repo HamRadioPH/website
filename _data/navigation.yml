@@ -2,9 +2,17 @@
 
 - text: Home
   url: /
+  slug: home
+- text: Blogs
+  url: /blogs
+  slug: blogs
+- text: Reviews
+  url: /reviews
+  slug: reviews
 - text: About
   url: /about
+  slug: about
 - text: Contact
   url: /contact
-- text: Blog
-  url: /blog
+  slug: contact
+

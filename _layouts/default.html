@@ -1,24 +1,11 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
 <html data-current="{{ page.section }}" lang="en">
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <main>
-
-      {{ content }}
-
+{% include head.html %}
+<body>
+    {% include navigation.html navigation=site.data.navigation %}
+    <main role="main">
+        {{ content }}
     </main>
-
     {% include footer.html %}
-
-  </body>
-
+</body>
 </html>

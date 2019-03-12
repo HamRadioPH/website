@@ -1,0 +1,25 @@
+.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+   padding:0;
+ 
+   > .col,
+   > [class*="col-"] {
+     padding-right: 0;
+     padding-left: 0;
+   }
+ }
+.btn, 
+.alert,
+.rounded,
+.breadcrumb,
+.navbar-toggler,
+.post-image,
+.post-tags .tag,
+.badge{
+    -webkit-border-radius: $border-radius !important;
+       -moz-border-radius: $border-radius !important;
+         -o-border-radius: $border-radius !important;
+            border-radius: $border-radius !important;
+
+}

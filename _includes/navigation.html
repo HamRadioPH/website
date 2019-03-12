@@ -1,11 +1,21 @@
 {% assign navurl = page.url | remove: 'index.html' %}
-<ul>
-{% for item in include.navigation %}
-  <li>
-    <a href="{{ item.url }}"{% if item.url == navurl %} data-current="current page"{% endif %}>{{ item.text }}</a>
-    {% if item.subitems %}
-      {% include navigation.html navigation=item.subitems %}
-    {% endif %}
-  </li>
-{% endfor %}
-</ul>
+<nav class="navbar navbar-expand-lg  navbar-light bg-light  fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" /></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+            {% for item in include.navigation %}
+            <li class="nav-item">
+                <a class="nav-link{% if item.url == navurl or page.section == item.slug %} active{% endif %}" href="{{ item.url }}"{% if item.url == navurl %} data-current="current page"{% endif %}>{{ item.text }}</a>
+                {% if item.subitems %}
+                    {% include navigation.html navigation=item.subitems %}
+                {% endif %}
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
