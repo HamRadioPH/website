@@ -1,7 +1,3 @@
----
-layout: post
-title: "About"
-permalink: /about.html
----
+# Ham Philippines Website
 
-__{{ site.title }}__ is an open source project of Ham Philippines in collaboration with _[Juan Caser, DW7LFU](http://www.nopoweb.com)_ who developed the site.
+This a public repository of Ham Philippines running using Jekyll
