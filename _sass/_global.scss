@@ -1,32 +1,18 @@
-/* Wave */
-.a {fill: none;}
-.b {clip-path: url(#a);}
-.c,.d {fill: #f9f9fc;}
-.d {opacity: 0.5;isolation: isolate;}
-
 body {
-    padding-top: 66px;
+    min-height: 75rem;
+    padding-top: 4.5rem;
     font-family: $font-sans;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-serif;
-}
 
-.breadcrumb{
-    background: transparent;
-    padding: .75rem 0;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    .breadcrumb-item,
-    .breadcrumb-item a{
-        font-size: .8rem;
+
+.navbar{
+    .navbar-brand{
+        font-family: $font-serif;
         font-weight: bold;
-        color:rgba(0,0,0,.6);
     }
-    .breadcrumb-item{
-        color:#000000;
-    }
-    .breadcrumb-item a:hover{
-        color:#000;
+    .nav-link{
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: bold;
     }
 }

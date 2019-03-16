@@ -5,7 +5,8 @@ description: >-
   same accessories which i already have.
 date: '2019-03-02T04:01:01.006Z'
 categories: "Reviews"
-thumbnail: https://cdn-images-1.medium.com/max/800/1*A_xXDd2W0LBAJVToCXGeEA.jpeg
+cover: https://cdn.staticaly.com/gh/HamRadioPH/cdn/722fbf42/images/cignus-uv85plus-cover.jpg
+thumbnail: https://cdn.staticaly.com/gh/HamRadioPH/cdn/722fbf42/images/cignus-uv85plus-thumbnail.jpg
 section: reviews
 author: juan_caser
 ---

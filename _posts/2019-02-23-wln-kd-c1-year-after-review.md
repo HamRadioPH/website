@@ -5,7 +5,8 @@ description: >-
   became my favorite that it is now my EDC radio.
 date: '2019-02-23T04:01:00.829Z'
 categories: 'Reviews'
-thumbnail: https://cdn-images-1.medium.com/max/800/1*hELxrCuo8VE8CoA4zoVa5w.png
+thumbnail: https://cdn.staticaly.com/gh/HamRadioPH/cdn/1cbab78b/images/wln-thumbnail.jpg
+cover: https://cdn.staticaly.com/gh/HamRadioPH/cdn/1cbab78b/images/wln-cover.jpg
 section: reviews
 author: juan_caser
 ---

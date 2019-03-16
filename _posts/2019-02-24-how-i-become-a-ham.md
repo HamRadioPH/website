@@ -4,7 +4,8 @@ description: >-
   Ham is not a processed meat, it’s a person who is skilled in the Amateur
   Radio.
 date: '2019-02-24T04:41:15.399Z'
-thumbnail: https://cdn-images-1.medium.com/max/800/1*cT-r0GUgJ3XI_Mwj758JAg.jpeg
+cover: https://cdn.staticaly.com/gh/HamRadioPH/cdn/b99bfdce/images/im-a-ham-cover.jpg
+thumbnail: https://cdn.staticaly.com/gh/HamRadioPH/cdn/b99bfdce/images/im-a-ham-thumbnail.jpg
 categories: 'Blogs'
 section: blogs
 author: juan_caser

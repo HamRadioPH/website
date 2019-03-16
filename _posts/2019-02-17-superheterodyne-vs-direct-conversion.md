@@ -4,7 +4,8 @@ description: >-
   Due to the increase of cheap Chinese radio a lot of people had been
   complaining that their receiver had been over modulated.
 date: '2019-02-17T04:01:00.694Z'
-thumbnail: https://cdn-images-1.medium.com/max/800/1*QRdijMeMYnNT3ZYGGhcbvQ.jpeg
+cover: https://cdn.staticaly.com/gh/HamRadioPH/cdn/a0bde32a/images/superheterodyne-cover.jpg
+thumbnail: https://cdn.staticaly.com/gh/HamRadioPH/cdn/a0bde32a/images/superheterodyne-thumbnail.jpg
 categories: 'Blogs'
 section: blogs
 author: juan_caser
