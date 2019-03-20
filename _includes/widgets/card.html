@@ -1,3 +1,10 @@
+{% if post.external_url %}
+    {% assign permalink = post.external_url %}
+    {% assign target = '_blank' %}
+{% else %}
+    {% assign permalink = post.url %}
+    {% assign target = '_self' %}
+{% endif %}
 
 <div class="post card mb-3 {% if mode == 2 %}mode2{% endif %}" style="max-width: 540px;">
     {% if mode == 1 %}
@@ -6,46 +13,39 @@
         {% else %}
             {% assign img = post.cover %}
         {% endif %}
-        <a href="{{ post.url }}" class="post-image card-img-top" style="background-image: url('{{ img }}');"></a>
+        <a href="{{ permalink }}" target="{{ target }}" class="post-image card-img-top" style="background-image: url('{{ img }}');"></a>
     {% else %}
         {% if post.cover %}
             {% assign img = post.cover %}
         {% else %}
             {% assign img = post.thumbnail %}
         {% endif %}
-        <a href="{{ post.url }}" class="post-image card-img-top" style="height:100px;background-image: url('{{ img }}');"></a>
+        <a href="{{ permalink }}" target="{{ target }}" class="post-image card-img-top" style="height:100px;background-image: url('{{ img }}');"></a>
     {% endif %}
 
     <div class="card-body">
-        <h5 class="card-title post-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <h5 class="card-title post-title"><a target="{{ target }}" href="{{ permalink }}" target="{{ target }}">{{ post.title }}</a></h5>     
         {% if mode == 1 %}
         <p class="card-text post-content">{{ post.description }}</p>
         {% endif %}
     </div>
+    {% if post.author %}
     <div class="card-footer clearfix pt-2 pb-2">
-        {% if post.author %}        
-            {% assign author = site.data.authors[post.author] %}    
-        {% endif %}        
-        {% assign words = post.content | number_of_words %}
-        {% if words < 360 %}
-          {% assign time_read = '1 min' %}
-        {% else %}
-            {% assign time_read = words | divided_by:180  %}
-            {% assign time_read = time_read | append:'mins'  %}
-        {% endif %}
+        {% assign author = site.data.authors[post.author] %}    
         <div class="row">
             <div class="col-md-2">
-            {% if author %}
+            {% if post.author %}
                 <img src="{{ author.avatar }}" class="author-image rounded-circle" alt="{{ author.name }}" />
             {% endif %}
             </div>
             <div class="col-md-8">
                 {% if author %}<div class="author-name">{{ author.name }}</div>{% endif %}
-                <div class="post-date"> {{ post.date | date: "%b %-d, %Y" }} - {{ time_read }}</div>
+                <div class="post-date"> {{ post.date | date: "%b %-d, %Y" }}</div>
             </div>
             <div class="col-md-2 text-right pt-2">
-                <a href="{{ post.url }}"><i class="far fa-bookmark"></i></a>
+                <a href="{{ permalink }}" target="{{ target }}"><i class="far fa-bookmark"></i></a>
             </div>
         </div>
     </div>
+    {% endif %}
 </div>
