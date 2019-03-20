@@ -9,8 +9,6 @@ section: reviews
 author: juan_caser
 ---
 
-![](https://cdn-images-1.medium.com/max/800/1*WKLYJOc7ID36Aq1qttfvoQ.jpeg)
-
 Way back December 2016 on our club Christmas party, one of the price is a small radio. I was so curious since it is very small and portable. After searching for couple days i stumble upon Baofeng UV-3R. Thats where i started digging into this portable radio more.
 
 Baofeng UV-3R is a copy of Yaesu VX-3R. After a year they released UV-3R Mk II with little changes to the original one.

@@ -30,7 +30,7 @@
             max-width: 80%;
             margin: 0 auto;
             display: inline;
-            @include boder_radius($border_radius);
+            @include border_radius($border-radius);
         }
         figure{
             text-align: center;
