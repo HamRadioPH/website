@@ -30,7 +30,9 @@ section: home
                 <img src="{{ image }}" />
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{ post.title }}</h5>
+                    {% if post.description != post.title %}
                     <p>{{ post.description }}</p>
+                    {% endif %}
                     <div class="align-center"><a href="{{ permalink }}" target="{{ target }}" class="read-more btn btn-success">Read More</a></div>
                 </div>
             </div>

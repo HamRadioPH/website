@@ -1,6 +1,6 @@
 ---
 layout: video
-title: Episode 195 - Alinco DJ-MD5 Dual Band DMR HT Radio
+title: Alinco DJ-MD5 Dual Band DMR HT Radio
 description: >-
   Finally one of the "Big 4" manufacturers is making a DMR Radio for Amateur Use.
 date: '2019-03-11T07:01:00.886Z'
