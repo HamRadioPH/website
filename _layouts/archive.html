@@ -1,0 +1,39 @@
+---
+layout: main
+---
+<section class="archive-page">
+    {% if page.img %}
+        <header style="background-image: url({{ page.img }});">
+            <div class="inner-wrapper align-middle">
+                <h1>{{page.title}}</h1>
+                <div>{{ content | markdownify }}</div>
+            </div>
+        </header>
+    {% else %}
+        <header style="background-image: url({{ page.img }});">
+            <h1>Category: {{page.title}}</h1>
+            <div>{{ content | markdownify }}</div>
+        </header>
+    {% endif %}
+
+    <div class="archive-posts pt-3">
+        {% if page.current_category %}
+            {% for category in site.categories %}
+                {% if page.current_category == category[0] %}
+                    {% for post in category[1] %}
+                        {% include post-list.html post=post %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            {% else %}
+            {% for post in paginator.posts %}
+                {% include post-list.html post=post %}
+            {% endfor %}
+            {% if paginator.posts %}
+                {% include pagination.html %}
+            {% else %}
+                <div class="alert alert-secondary">No {{ page.title }} posts found!</div>
+            {% endif %}
+        {% endif %}
+    </div>
+</section>
