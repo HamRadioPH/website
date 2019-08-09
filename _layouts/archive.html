@@ -10,12 +10,12 @@ layout: main
             </div>
         </header>
     {% else %}
-        <header style="background-image: url({{ page.img }});">
+        <header>
             <h1>Category: {{page.title}}</h1>
             <div>{{ content | markdownify }}</div>
         </header>
     {% endif %}
-
+    {% include breadcrumbs.html %}
     <div class="archive-posts pt-3">
         {% if page.current_category %}
             {% for category in site.categories %}

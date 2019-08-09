@@ -3,23 +3,28 @@ description: > # this means to ignore newlines until "baseurl:"
   Your source of amateur radio news and updates in the Philippines
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.hamradioph.com" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: im.mister.juan
+author: Ham Philippines
 author-img: logo.jpg
-about-author: I am a web developer from a small island in the Philippines. Im also a licensed amateur Radio Operator with a callsign of DW7LFU
-social-twitter: immisterjuan
-social-facebook: nopoweb 
-social-github: juancaser
-social-linkedin: juancaser
-social-email: hello@nopoweb.com
+social-twitter: HamPhilippines
+social-facebook: hamradioph
+social-email: hello@hamradioph.com
 
 collections:
   authors:
     output: true
     people: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      img: /assets/img/default.jpg
 
 permalink: /:categories/:title:output_ext
 

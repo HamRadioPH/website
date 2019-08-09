@@ -1,0 +1,5 @@
+{% for post in paginator.posts limit: 3 %}
+    {% if post.categories[0] == page.category[0] %}
+    {{ post.title }}
+    {% endif %}
+{% endfor %}

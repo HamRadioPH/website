@@ -68,6 +68,16 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+  .latest-post{
+    header{
+        margin-top: auto;
+        width: 100%;
+        text-align: center;
+        h1{
+          font-size:2rem;
+        }
+    }
+  }
   .content-box {
     padding: 10px;
   }
@@ -83,10 +93,30 @@
 
     .post-content {
       width: 100%;
+      text-align: justify;
       .post-title {
         margin: 0 0 5px;
         a {
-          font-size: 21px;
+          text-align: justify;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  .page-content{
+    .page-title{
+      font-size: 2rem;
+      line-break: 1.5em;
+    }
+    .wrap-content{
+      padding-left:20px;
+      padding-right:20px;
+
+      figure{
+        padding:0 !important;
+        margin:0 !important;
+        img{
+          width: 100%;
         }
       }
     }

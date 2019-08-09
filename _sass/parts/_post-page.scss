@@ -1,5 +1,5 @@
 .wrap-content {
-	padding: 20px 50px;
+	padding: 20px 30px;
 	
 	figure {
 		text-align: center;
@@ -17,7 +17,23 @@
 		font-style: italic;
 	}
 }
-
+nav.breadcrumbs{
+	.breadcrumb{
+		background: #FFF !important;
+		-webkit-border-radius: 3px;
+		-khtml-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+	.breadcrumb-item{
+		color:#333 !important;
+		font-size:13px !important;
+		a{
+			color:rgba(0,56,168,0.8);
+		}
+	}
+}
 .header-page {
 	text-align: center;
 	margin: 10px 0;

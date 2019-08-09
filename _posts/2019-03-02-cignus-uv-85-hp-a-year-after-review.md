@@ -6,6 +6,7 @@ description: Ham is not a processed meat, it’s a person who is skilled in the 
 img: https://cdn-images-1.medium.com/max/2000/1*doPOoge0M1TZ4DGH5zHR7Q.png
 author: juan
 categories: [reviews]
+canonical_url: https://medium.com/hamph/cignus-uv-85-hp-a-year-after-review-e67ad6d47e8b
 ---
 
 This is the first radio that I bought upon recommendation from a ham friend, I got this radio from a local Cignus dealer for a 2,500 pesos, I also bought a Cignus RH-771 dual band whip antenna. This was my EDC radio for three years because it is very portable and uses the same accessories which i already have.
@@ -66,3 +67,4 @@ Battery life is also good, mine last for 4 days with casual use. However, I noti
 Will I recommend this? if you’re looking for a starter radio I would certainly recommend this than Baofeng UV-5R or UV-82. Because those service warranty is quite handy one day. Apart from that I wouldn't recommend this for daily driver. You’ll better off getting those budget Yaesu radio which is technically same with most Chinese radio except they added some software based IF filter, may not as good as the hardware base but it’s an improvement.
 
 {% include image.html url="https://cdn-images-1.medium.com/max/2048/1*A_xXDd2W0LBAJVToCXGeEA.jpeg" %}
+

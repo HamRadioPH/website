@@ -5,6 +5,7 @@ date: 2019-02-17 12:00:00 +0300
 img: https://cdn-images-1.medium.com/max/2560/1*QRdijMeMYnNT3ZYGGhcbvQ.jpeg
 author: juan
 categories: [blogs]
+canonical_url: https://medium.com/hamph/superheterodyne-vs-direct-conversion-fd2f503b65fb
 ---
 
 Due to the increase of cheap Chinese radio a lot of people had been complaining that their receiver had been over modulated (bingi) if they connect it to an external antenna. Over-modulation is a condition where there is a high level of modulating (transmitting) signal exceed the value necessary to produce 100% modulation of the carrier. It means you won’t be able to hear the other station because your receiver cannot filter all the modulating signal transmitted from other radio, even if they are transmitting on different frequency.

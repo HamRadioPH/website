@@ -5,6 +5,7 @@ date: 2019-02-12 12:00:00 +0300
 img: https://miro.medium.com/max/700/1*AXq63Q6Yx5SNc3sB1VUsbw.jpeg
 author: juan
 categories: [blogs]
+canonical_url: https://medium.com/hamph/swr-for-dummies-830f09855f95
 ---
 
 Once you have setup your external antenna, you are most likely heard about antenna tuning and SWR.

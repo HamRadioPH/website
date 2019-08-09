@@ -5,6 +5,7 @@ date: 2019-02-16 12:00:00 +0300
 img: https://miro.medium.com/max/700/1*WKLYJOc7ID36Aq1qttfvoQ.jpeg
 author: juan
 categories: [reviews]
+canonical_url: https://medium.com/hamph/baofeng-uv-3r-a-year-after-review-3aa0f99e3881 
 ---
 
 Way back December 2016 on our club Christmas party, one of the price is a small radio. I was so curious since it is very small and portable. After searching for couple days i stumble upon Baofeng UV-3R. Thats where i started digging into this portable radio more.
