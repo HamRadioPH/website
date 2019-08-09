@@ -1,3 +1,15 @@
+.notice-alert{
+    margin-bottom: 15px;
+    padding: 20px;
+    color: #494e52;
+    text-indent: initial;
+    background-color: #ecf6ec;
+    box-shadow: 0 1px 1px rgba(63,166,63,0.25);
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -9,7 +21,7 @@
     width: 240px;
     height: 100%;
     padding: 20px 10px;  
-    background: $white url('/assets/img/nav-bg.png') no-repeat 0 100% !important;
+    background: $white url('/assets/img/sidebar-bg.png') no-repeat 0 100% !important;
     background-size: cover;
     .menu-button{
         position: absolute;
@@ -29,7 +41,7 @@
             text-transform: uppercase;
             font-weight: 300;
             color:rgba(0,0,0,0.6);
-            font-size:1rem;
+            font-size:0.85rem;
             display:block;
             padding:5px;
             text-decoration: none;
@@ -46,7 +58,7 @@
             &:hover,
             &.active{
                 color:#FFF;
-                background-color:rgba(0,0,0,0.8);
+                background-color:rgba(0,56,168,0.8);
                 
             }
         }
@@ -56,6 +68,38 @@
             display: inline-block !important;
         }
     }
+}
+
+.latest-post{
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FFF;
+    display: block;
+    header{
+        margin-top:100px;
+        width: 60%;
+        h1,p{
+            background-color:rgba(0,0,0,0.6);
+            color:#FFF;
+            display: inline-block;
+            padding:5px 10px;
+
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+        }
+        h1{
+            font-weight: 300;
+            font-size:2.5rem;
+        }
+        p{
+            text-decoration: none;            
+            font-size:14px;;
+        }
+    }
+
 }
 .about {
     margin: 0 0 40px;
@@ -246,3 +290,4 @@ a.older-posts:hover {
 a.newer-posts:hover {
     transform: translateX(-5px);
 }
+

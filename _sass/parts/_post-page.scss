@@ -134,3 +134,18 @@
 		}
 	}
 }
+
+.post-author{
+	.author-links{
+		a{
+			text-decoration:none;
+			color:#AAA;
+			display: inline-block;
+			margin-right:5px;
+			font-size:1.5rem;
+			&:hover{
+				color:#247eb3;
+			}
+		}
+	}
+}

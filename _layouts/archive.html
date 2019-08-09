@@ -32,7 +32,7 @@ layout: main
             {% if paginator.posts %}
                 {% include pagination.html %}
             {% else %}
-                <div class="alert alert-secondary">No {{ page.title }} posts found!</div>
+                <div class="notice-alert">No <strong>{{ page.title }}</strong> posts found!</div>
             {% endif %}
         {% endif %}
     </div>
