@@ -1,6 +1,6 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'Ham Philippines'
+description: 'Your ham radio radio resource in the Philippines'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
@@ -9,7 +9,7 @@ email: 'wowthemesnet@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
-permalink: /:title/
+permalink: /:categories/:title:output_ext
 
 # Plugins
 plugins: 
@@ -62,4 +62,4 @@ paginate: 10
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules,Gemfile,Gemfile.lock]
