@@ -1,0 +1,50 @@
+
+@media (max-width: 575px) {
+    .navbar{
+        border-bottom: 1px solid #e8f3ec !important;
+        .nav-item{
+            display: block;
+            margin-bottom: 5px;
+            width: 100%;
+            .nav-link{
+                display: block;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+
+                color: #fff !important;
+                background-color: #212529;
+                border-color: #212529;
+
+                -webkit-border-radius: 2px;
+                -khtml-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+
+                &:hover{
+                    color: #fff !important;
+                }
+
+            }
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

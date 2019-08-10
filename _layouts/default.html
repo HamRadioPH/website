@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/theme.css">
     {% include tracking-header.html %}
 </head>
@@ -32,11 +31,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarColor02" style="">
-                <ul class="navbar-nav mr-auto d-flex align-items-center">
-                    {% include menu-header.html %}
-                </ul>
                 <ul class="navbar-nav ml-auto d-flex align-items-center">
-                    {% include search-lunr.html %}
+                    {% include menu-header.html %}
                 </ul>
             </div>
         </div>
@@ -66,5 +62,4 @@
     <script src="/assets/js/theme.js"></script>
     {% include tracking-footer.html %}
 </body>
-
 </html>
