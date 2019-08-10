@@ -1,5 +1,6 @@
 ---
 layout: archive
-title: Events
+title: Events, Contests & DXpedition
+current_category: events
 ---
 
