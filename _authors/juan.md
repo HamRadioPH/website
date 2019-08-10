@@ -9,4 +9,4 @@ facebook: https://www.facebook.com/nopoweb/
 instagram: https://www.instagram.com/wandering.juan/
 email: hello@nopoweb.com
 ---
-Juan is a licensed amateur radio operator with a callsign of DW7LFU, his QTH is History Resort City of Lapu-lapu City Cebu Philippines.
+Juan is a licensed amateur radio operator with a callsign of DW7LFU, his QTH is the Historic Resort City of Lapu-lapu Cebu Philippines.
