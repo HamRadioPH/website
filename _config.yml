@@ -32,7 +32,7 @@ permalink: /:categories/:title:output_ext
 #discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-135663348-1
 
 # Build Settings
 markdown: kramdown
