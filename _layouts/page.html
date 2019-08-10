@@ -17,6 +17,9 @@ layout: main
             <header class="header-page">
                 <h1 class="page-title">{{page.title}}</h1>
             </header>
+            <div class="border-top border-bottom mb-5">
+                {% include breadcrumbs.html %}
+            </div>
             {{ content | markdownify }}
             {% if page.share == true %}  
             <div class="page-footer">

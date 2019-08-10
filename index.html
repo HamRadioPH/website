@@ -1,14 +1,10 @@
 ---
 layout: main
 ---
-{% assign latest  = site.posts.first %}
-<a href="{{ latest.url | prepend: site.baseurl }}" class="latest-post jumbotron w-100" style="background-image:url('{{ latest.img }}');">
-    <header>
-        <h1 class="display-4">{{ latest.title }}</h1>
-    </header>
-</a>
+{% assign items = paginator.posts %}
+{% include carousel.html items=items %}
 
-{% for post in paginator.posts offset: 1 %}
+{% for post in paginator.posts offset: 3 %}
     {% include post-list.html post=post %}
 {% endfor %}
 

@@ -56,3 +56,4 @@ Direct-conversion is the future, it has still a long way to go but it’s going 
 ## Notes…
 
 So the next time you connect your Chinese radio into an external antenna, take time to do some propagation testing, see if your area has high RF traffic. If it does, I suggest getting a good radio with good filter. It will be expensive but it would surely give you peace of mind that every time you press that PTT your signal will always get through or you receive those important traffic.
+

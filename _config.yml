@@ -3,7 +3,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Your source of amateur radio news and updates in the Philippines
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.hamradioph.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
@@ -25,6 +25,12 @@ defaults:
       type: "posts"
     values:
       img: /assets/img/default.jpg
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
 
 permalink: /:categories/:title:output_ext
 

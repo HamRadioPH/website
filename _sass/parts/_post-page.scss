@@ -152,6 +152,17 @@ nav.breadcrumbs{
 }
 
 .post-author{
+	.author-name{
+		a{
+			color:#343a40;
+		}
+		
+	}
+	.author-description{
+		p{
+			font-size: 0.9rem;
+		}
+	}
 	.author-links{
 		a{
 			text-decoration:none;

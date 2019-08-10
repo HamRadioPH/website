@@ -258,8 +258,29 @@ footer {
         width: 70%;
         .post-date,
         .post-words,
-        .post-author {
+        .post-author,
+        .post-categories{
             font-size: 12px;
+        }
+        .post-author{
+            a{
+                color:#515151;
+            }
+        }
+        .post-categories{
+            text-transform: uppercase;
+            .category{
+                color:#515151;
+                display: inline-block;
+                background-color:#fbfbfb;
+                font-size:11px;
+                padding:0 5px;
+                -webkit-border-radius: 2px;
+                -khtml-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+
+            }
         }
         .post-title {
             margin: 0 0 10px;
@@ -292,3 +313,26 @@ a.newer-posts:hover {
     transform: translateX(-5px);
 }
 
+#carousel-wrapper{
+    max-height: 500px;
+    .carousel-inner{
+        .carousel-item{
+            width: 854px !important;
+            max-height:400px;
+            background-color: #000;
+            img {
+                margin:0 auto;
+                height: 100%;
+                max-height: 100vh; 
+                object-fit: cover;
+            }
+            .carousel-caption{
+                background-color: rgba(0,0,0,0.6);
+                h2{
+                    color:#FFF;
+
+                }
+            }
+        }
+    }
+}

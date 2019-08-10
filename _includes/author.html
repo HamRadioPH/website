@@ -1,23 +1,25 @@
 <div class="container post-author">
     <div class="row">
-            <div class="col-md-3 col-sm-12 col-xs-12">
-                {% if author.image%}
-                    <img src="{{ author.image }}" alt="" class="rounded img-fluid" alt="{{ author.name }}" title="{{ author.name }}">
-                {% else %}
-                    <img src="/assets/img/logo.png" alt="" class="rounded img-fluid" alt="{{ author.name }}" title="{{ author.name }}">
-                {% endif %}
-            </div>
-            <div class="col-md-9 col-sm-12 col-xs-12">
-                <h3 class="m-0 p-0 mb-1">{{ author.name }}</h3>
-                <div class="author-position mb-2 text-muted">{{ author.position }}</div>
+        <div class="col-md-9 col-sm-12 col-xs-12">
+            <h3 class="author-name m-0 p-0 mb-1"><a href="{{ author.url }}">{{ author.name }}</a></h3>
+            <div class="author-position mb-2 text-muted">{{ author.position }}</div>
+            <div class="author-description">
                 {{ author.content | markdownify }}
-                <div class="author-links">
-                    {% if author.web %}<a href="{{ author.web }}" class="fa fa-globe" title="{{ author.web }}" target="_blank"></a>{% endif %}
-                    {% if author.faceboook %}<a href="{{ author.faceboook }}" class="fa fa-facebook-official" title="Facebook" target="_blank"></a>{% endif %}
-                    {% if author.twitter %}<a href="{{ author.twitter }}" class="fa fa-twitter" title="Twitter" target="_blank"></a>{% endif %}
-                    {% if author.instagram %}<a href="{{ author.instagram }}" class="fa fa-instagram" title="Instagram" target="_blank"></a>{% endif %}
-                    {% if author.email %}<a href="mailto:{{ author.email }}" class="fa fa-envelope-o" title="Email" target="_blank"></a>{% endif %}
-                </div>
             </div>
+            <div class="author-links">
+                {% if author.web %}<a href="{{ author.web }}" class="fa fa-globe" title="{{ author.web }}" target="_blank"></a>{% endif %}
+                {% if author.facebook %}<a href="{{ author.facebook }}" class="fa fa-facebook-official" title="Facebook" target="_blank"></a>{% endif %}
+                {% if author.twitter %}<a href="{{ author.twitter }}" class="fa fa-twitter" title="Twitter" target="_blank"></a>{% endif %}
+                {% if author.instagram %}<a href="{{ author.instagram }}" class="fa fa-instagram" title="Instagram" target="_blank"></a>{% endif %}
+                {% if author.email %}<a href="mailto:{{ author.email }}" class="fa fa-envelope-o" title="Email" target="_blank"></a>{% endif %}
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            {% if author.image%}
+                <img src="{{ author.image }}" alt="" class="rounded img-fluid" alt="{{ author.name }}" title="{{ author.name }}">
+            {% else %}
+                <img src="/assets/img/logo.png" alt="" class="rounded img-fluid" alt="{{ author.name }}" title="{{ author.name }}">
+            {% endif %}
+        </div>
     </div>
 </div>
