@@ -3,6 +3,7 @@ layout: post
 title: WLN KD-C1 — Year after Review
 date: 2019-02-23 12:00:00 +0300
 img: https://cdn-images-1.medium.com/max/2000/1*hELxrCuo8VE8CoA4zoVa5w.png
+description: When this little thing came everybody is talking about it, it is small, compact and very loud. Nope its not the Baofeng UV-3R+, its WLN KD-C1.
 author: juan
 categories: [reviews]
 canonical_url: https://medium.com/hamph/wln-kd-c1-year-after-review-b946dfb62a50

@@ -3,6 +3,7 @@ layout: post
 title: Superheterodyne vs Direct-Conversion
 date: 2019-02-17 12:00:00 +0300
 img: https://cdn-images-1.medium.com/max/2560/1*QRdijMeMYnNT3ZYGGhcbvQ.jpeg
+description: The superheterodyne receiver or superhet, was invented in 1917, it is a type of receiver that uses frequency mixing to convert the received signal to a fixed intermediate frequency (IF) which can be easily process.
 author: juan
 categories: [blogs]
 canonical_url: https://medium.com/hamph/superheterodyne-vs-direct-conversion-fd2f503b65fb
