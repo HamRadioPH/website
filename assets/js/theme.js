@@ -1,15 +1,14 @@
- // alertbar later
-    $(document).scroll(function () {
-        var y = $(this).scrollTop();
-        if (y > 280) {
-            $('.alertbar').fadeIn();
-        } else {
-            $('.alertbar').fadeOut();
-        }
-    });
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 280) {
+        $('.alertbar').fadeIn();
+    } else {
+        $('.alertbar').fadeOut();
+    }
+});
 
 
-// Hide Header on on scroll down
+
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -107,14 +106,14 @@ function loadSearch(){
 
 // Smooth on external page
 $(function() {
-  setTimeout(function() {
-    if (location.hash) {
-      /* we need to scroll to the top of the window first, because the browser will always jump to the anchor first before JavaScript is ready, thanks Stack Overflow: http://stackoverflow.com/a/3659116 */
-      window.scrollTo(0, 0);
-      target = location.hash.split('#');
-      smoothScrollTo($('#'+target[1]));
-    }
-  }, 1);
+    setTimeout(function() {
+        if (location.hash) {
+            /* we need to scroll to the top of the window first, because the browser will always jump to the anchor first before JavaScript is ready, thanks Stack Overflow: http://stackoverflow.com/a/3659116 */
+            window.scrollTo(0, 0);
+            target = location.hash.split('#');
+            smoothScrollTo($('#'+target[1]));
+        }
+    }, 1);
 
   // taken from: https://css-tricks.com/snippets/jquery/smooth-scrolling/
   $('a[href*=\\#]:not([href=\\#])').click(function() {
