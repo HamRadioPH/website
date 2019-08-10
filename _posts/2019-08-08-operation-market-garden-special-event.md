@@ -8,7 +8,7 @@ author: juan
 categories: [events]
 ---
 
-To commemorate the anniversary of Operation Market Garden in Word War II where paratroopers of allied forces, such as Americans, British, Canadians, Polish and Dutch landed in Nijmegen region to liberate it from Nazi occupation for 4 years.
+To commemorate the anniversary of Operation Market Garden in World War II where paratroopers of allied forces, such as Americans, British, Canadians, Polish and Dutch landed in Nijmegen region to liberate it from Nazi occupation.
 
 An event station *PA75OMG* will be activated between September 12 to 22nd. This will be a 10 day event where they will try to work as many amateur radio  operators across the world as possible.
 
