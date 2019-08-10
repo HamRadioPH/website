@@ -3,7 +3,6 @@ layout: main
 ---
 {% assign items = paginator.posts %}
 {% include carousel.html items=items %}
-
 {% for post in paginator.posts offset: 3 %}
     {% include post-list.html post=post %}
 {% endfor %}
