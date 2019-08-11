@@ -6,6 +6,7 @@ image: /posts/yaesu-ft-3d-main.jpg
 description: Yaesu FT3D is the next flagship HT from a japanese manufacturer released this year.
 author: juan
 categories: [news]
+visibility: featured
 ---
 
 *Yaesu FT3D* is the next flagship HT from a japanese manufacturer released this year. It covers VHF/UHF and it features full colored touchscreen display, a Bluetooth and most features already present from FT2D.
