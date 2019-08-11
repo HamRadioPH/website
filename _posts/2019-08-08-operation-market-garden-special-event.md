@@ -2,7 +2,7 @@
 layout: post
 title: Operation Market Garden special event
 date: 2019-08-08 11:00:00 +0800
-image: https://github.com/HamRadioPH/cdn/blob/production/images/pa75omg.jpg?raw=true
+image: /posts/omg-event-pa7omg.jpg
 description: Activity is to commemorate and celebrate the anniversary of freedom.
 author: juan
 categories: [events]

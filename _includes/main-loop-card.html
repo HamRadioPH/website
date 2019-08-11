@@ -2,6 +2,7 @@
 	<div class="pr-3">
 		<h2 class="mb-1 h4 font-weight-bold"><a class="text-dark" href="{{post.url}}">{{ post.title }}</a></h2>
 		<p class="excerpt">{{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}</p>
+		{% if page.category == nil %}
 		<small class="d-block text-muted">
 			In <span class="catlist">
 			{% for category in post.categories %}
@@ -9,20 +10,20 @@
 			{% endfor %}
 			</span>
 		</small>
+		{% endif %}
 		<small class="text-muted">{{ post.date | date: '%b %d, %Y' }}</small>
 	</div>
 	{% if post.image %}
 	<div class="col-md-3 pr-0 text-right">
 		<a href="{{ post.url }}">
-			{% if page.image contains '://' %}
-				{% assign post_image = page.image %}
-			{% else %}
-				{% if site.cdn_url %}
-					{% assign post_image = site.cdn_url | append: page.image %}
-				{% else %}
-					{% assign post_image = page.image %}
-				{% endif %}
-			{% endif %}
+        {% assign post_image = post.image %}
+        {% if post.image contains '://' %}
+            {% assign post_image = post.image %}
+        {% else %}
+            {% if site.cdn_url %}
+                {% assign post_image = site.cdn_url | append: post.image %}
+            {% endif %}
+        {% endif %}
 			<img class="w-100" src="{{ post_image }}" alt="{{ post.title }}">
 		</a>
 	</div>

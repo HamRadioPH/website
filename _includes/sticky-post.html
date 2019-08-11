@@ -8,7 +8,15 @@
                     <p class="mb-3 lead">{{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}</p>
                     <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
                 </div>
-                <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.image }});"></div>
+                {% assign post_image = post.image %}
+                {% if post.image contains '://' %}
+                    {% assign post_image = post.image %}
+                {% else %}
+                    {% if site.cdn_url %}
+                        {% assign post_image = site.cdn_url | append: post.image %}
+                    {% endif %}
+                {% endif %}
+                <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post_image }});"></div>
             </div>
         </div>
     </div>

@@ -1,16 +1,12 @@
 <figure class="image">
-    {{ include.url }}asda
-    {% if include.url '://' %}
+    {% assign image_url = include.url %}
+    {% if include.url contains '://' %}
         {% assign image_url = include.url %}
     {% else %}
         {% if site.cdn_url %}
             {% assign image_url = site.cdn_url | append: include.url %}
-        {% else %}
-            oleh
-            {% assign image_url = include.url %}
         {% endif %}
     {% endif %}
-    {{ image_url }}
     <a href="{{ image_url }}" data-fancybox="images"><img src="{{ image_url }}" alt="{% if include.description %}{{ include.description }}{% endif %}"></a>
     {% if include.description %}
         <figcaption>{{ include.description }}</figcaption>
