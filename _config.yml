@@ -2,7 +2,6 @@
 name: 'Ham Philippines'
 description: 'Your ham radio radio resource in the Philippines'
 logo: '/assets/images/logo.png'
-favicon: '/assets/images/favicon.ico'
 # baseurl: 'https://www.hamradioph.com' # Production
 baseurl: 'https://staginghamph.netlify.com' # staging
 #baseurl: '' # localhost
