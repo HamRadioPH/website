@@ -21,6 +21,8 @@ collections:
   authors:
     output: true
     people: true
+  references:
+    output: true
 
 # Defaults
 defaults:
