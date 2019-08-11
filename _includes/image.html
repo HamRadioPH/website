@@ -1,4 +1,14 @@
 <figure class="image">
-    <a href="{{ include.url }}" data-fancybox="images"><img src="{{ include.url }}" alt="{{ include.description }}"></a>
-    <figcaption>{{ include.description }}</figcaption>
+    {% assign image_url = include.url %}
+    {% if include.url contains '://' %}
+        {% assign image_url = include.url %}
+    {% else %}
+        {% if site.cdn_url %}
+            {% assign image_url = site.cdn_url | append: include.url %}
+        {% endif %}
+    {% endif %}
+    <a href="{{ image_url }}" data-fancybox="images"><img src="{{ image_url }}" alt="{% if include.description %}{{ include.description }}{% endif %}"></a>
+    {% if include.description %}
+        <figcaption>{{ include.description }}</figcaption>
+    {% endif %}
 </figure>

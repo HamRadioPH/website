@@ -15,9 +15,15 @@ layout: default
                         </span>
 					</p>
 					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-
-					{% assign author = site.authors | where: 'short_name', page.author | first %}
-					{% if author %}
+					{% if page.source %}
+						<div class="d-flex align-items-center">
+							<small class="ml-3">By {{ page.author }}
+								<span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
+							</small>
+						</div>
+					{% else %}
+						{% assign author = site.authors | where: 'short_name', page.author | first %}
+						{% if author %}
 						<div class="d-flex align-items-center">
 							{% if author.avatar %}
 							<img class="rounded-circle" src="{{ author.avatar }}" alt="{{ author.name }}" width="70"/>
@@ -26,12 +32,20 @@ layout: default
 								<span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
 							</small>
 						</div>
+						{% endif %}
 					{% endif %}
-
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+					{% assign post_image = page.image %}
+					{% if page.image contains '://' %}
+						{% assign post_image = page.image %}
+					{% else %}
+						{% if site.cdn_url %}
+							{% assign post_image = site.cdn_url | append: page.image %}		
+						{% endif %}
+					{% endif %}
+					<img class="rounded" src="{{ post_image }}" alt="{{ page.title }}">
 				</div>
                 {% endif %}
 			</div>
@@ -55,7 +69,12 @@ layout: default
 			</div>
 		</div>
 		<div class="col-md-12 col-lg-8">
-			<article class="article-post">{{ content }}</article>
+			<article class="article-post">
+				{{ content }}
+				{% if page.source %}
+				<a href="{{ page.source }}" class="btn btn-large btn-block btn-primary" target="_blank">CONTINUE READING </a>
+				{% endif %}
+			</article>
 			<div class="mb-4">
 				<span class="taglist">
 				{% for tag in page.tags %}
@@ -85,27 +104,28 @@ layout: default
 			</div>
             {% endif %}
             
-            
-			{% assign author = site.authors | where: 'short_name', page.author | first %}
-			{% if author %}
-			<div class="row mt-5">
-				<div class="col-md-2 align-self-center">
-					{% if author.avatar %}<img class="rounded-circle" src="{{ author.avatar }}" alt="{{ author.name }}" width="90"/>{% endif %} 
-				</div>
-				<div class="col-md-10">		
-					<h5 class="font-weight-bold">Written by {{ author.name }}</h5>
-					<div class="author-bio">
-						{{ author.content | markdownify }}
+            {% if page.source_author == nil %}
+				{% assign author = site.authors | where: 'short_name', page.author | first %}
+				{% if author %}
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+						{% if author.avatar %}<img class="rounded-circle" src="{{ author.avatar }}" alt="{{ author.name }}" width="90"/>{% endif %} 
 					</div>
-					<div class="author-links">
-						{% if author.web %}<a href="{{ author.web }}" class="fa fa-globe" title="{{ author.web }}" target="_blank"></a>{% endif %}
-						{% if author.facebook %}<a href="{{ author.facebook }}" class="fab fa-facebook" title="Facebook" target="_blank"></a>{% endif %}
-						{% if author.twitter %}<a href="{{ author.twitter }}" class="fab fa-twitter" title="Twitter" target="_blank"></a>{% endif %}
-						{% if author.instagram %}<a href="{{ author.instagram }}" class="fab fa-instagram" title="Instagram" target="_blank"></a>{% endif %}
-						{% if author.email %}<a href="mailto:{{ author.email }}" class="far fa-envelope-o" title="Email" target="_blank"></a>{% endif %}
+					<div class="col-md-10">		
+						<h5 class="font-weight-bold">Written by {{ author.name }}</h5>
+						<div class="author-bio">
+							{{ author.content | markdownify }}
+						</div>
+						<div class="author-links">
+							{% if author.web %}<a href="{{ author.web }}" class="fa fa-globe" title="{{ author.web }}" target="_blank"></a>{% endif %}
+							{% if author.facebook %}<a href="{{ author.facebook }}" class="fab fa-facebook" title="Facebook" target="_blank"></a>{% endif %}
+							{% if author.twitter %}<a href="{{ author.twitter }}" class="fab fa-twitter" title="Twitter" target="_blank"></a>{% endif %}
+							{% if author.instagram %}<a href="{{ author.instagram }}" class="fab fa-instagram" title="Instagram" target="_blank"></a>{% endif %}
+							{% if author.email %}<a href="mailto:{{ author.email }}" class="far fa-envelope-o" title="Email" target="_blank"></a>{% endif %}
+						</div>
 					</div>
-				</div>
-			</div>	
+				</div>	
+				{% endif %}
 			{% endif %}
             {% if page.comments != false %}
                 {% include comments.html %}
@@ -114,19 +134,33 @@ layout: default
 	</div>
 </div>
 
-
-<!-- Aletbar Prev/Next -->
 <div class="alertbar">
     <div class="container">
         <div class="row prevnextlinks small font-weight-bold">
           {% if page.previous.url %}
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{page.previous.image}}"> {% endif %} {{page.previous.title}}</a>
+				{% assign post_image = page.previous.image %}
+				{% if page.previous.image contains '://' %}
+					{% assign post_image = page.previous.image %}
+				{% else %}
+					{% if site.cdn_url %}
+						{% assign post_image = site.cdn_url | append: page.previous.image %}		
+					{% endif %}
+				{% endif %}
+                <a class="text-dark" href="{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{ post_image }}"> {% endif %} {{page.previous.title}}</a>
             </div>
           {% endif %}
           {% if page.next.url %}
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.next.url }}"> {{page.next.title}} {% if page.next.image %} <img height="30px" class="ml-1" src="{{page.next.image}}"> {% endif %}</a>
+					{% assign post_image = page.next.image %}
+					{% if page.previous.image contains '://' %}
+						{% assign post_image = page.next.image %}
+					{% else %}
+						{% if site.cdn_url %}
+							{% assign post_image = site.cdn_url | append: page.next.image %}		
+						{% endif %}
+					{% endif %}
+                <a class="text-dark" href="{{ page.next.url }}"> {{page.next.title}} {% if page.next.image %} <img height="30px" class="ml-1" src="{{ post_image }}"> {% endif %}</a>
             </div>
           {% endif %}
         </div>

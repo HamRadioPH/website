@@ -2,11 +2,14 @@
 name: 'Ham Philippines'
 description: 'Your ham radio radio resource in the Philippines'
 logo: '/assets/images/logo.png'
-baseurl: ''
+favicon: '/assets/images/favicon.ico'
+# baseurl: 'https://www.hamradioph.com' # Production
+# baseurl: 'https://staginghamph.netlify.com' # staging
+baseurl: '' # localhost
 email: 'hello@hamradioph.com'
 mailchimp-list: 'https://gmail.us3.list-manage.com/subscribe/post?u=d82df82a7f4aab50de85b52ec&amp;id=606977dfd1'
+cdn_url: 'https://cdn.statically.io/gh/HamRadioPH/cdn/master'
 
-include: ["_pages"]
 permalink: /:categories/:title:output_ext
 
 # Plugins
@@ -20,6 +23,8 @@ collections:
   authors:
     output: true
     people: true
+  references:
+    output: true
 
 # Defaults
 defaults:
@@ -29,8 +34,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
+      author: juan
+      avatar: /assets/images/logo.png
       
   # all pages
   - scope:

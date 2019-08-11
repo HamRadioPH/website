@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Superheterodyne vs Direct-Conversion
-date: 2019-02-17 12:00:00 +0300
-image: https://cdn-images-1.medium.com/max/2560/1*QRdijMeMYnNT3ZYGGhcbvQ.jpeg
+date: 2019-02-17 11:00:00 +0800
+image: /posts/yaesu-frg-7.jpeg
 description: The superheterodyne receiver or superhet, was invented in 1917, it is a type of receiver that uses frequency mixing to convert the received signal to a fixed intermediate frequency (IF) which can be easily process.
 author: juan
 categories: [blogs]
@@ -18,7 +18,7 @@ The superheterodyne receiver or superhet, was invented in 1917, it is a type of 
 
 The basic principle is to convert a RF signals to an intermediate frequency (IF) by mixing a tunable local oscillator (LO) with incoming signals (*see Figure 1*). A fixed-frequency narrow-channel filter is applied at the mixer output, then followed by most of the receiver’s gain and demodulation. RF filters are placed before and after the LNA stage.
 
-{% include image.html url="https://cdn-images-1.medium.com/max/3840/1*pMvVR-mk7_SWtqKPWseaSw.png" description="**Figure 1.** Block diagram of a superheterodyne receiver." %}
+{% include image.html url="/posts/block-diag-superhet.jpg" description="Figure 1. Block diagram of a superheterodyne receiver." %}
 
 The benefits of a superhet are enormous and sometimes it outweighs the cost. Most of the filtering and gain takes place at one fixed frequency rather than requiring a tunable high-Q band pass filters.
 
@@ -36,7 +36,7 @@ The disadvantage of a near zero-IF is that the receiver’s polyphase filters re
 
 Direct-Conversion receiver or homodyne, synchrodyne, or zero-IF receiver, is a type radio receiver where the local oscillator (LO) is set to the same frequency as the desired RF channel, that means the IF is zero or dc. The filtering and gain can take place at dc where gain is easier to achieve with low power and filter can be accomplished with on-chip resistors and capacitors instead of bulky surface-acoustic wave (SAW) filters. (*see Figure 2*)
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2000/1*3ph9WifjnZDgwRifqLjYrw.png" description="***Figure 2.** Block diagram of Direct-conversion receiver*" %}
+{% include image.html url="/posts/block-diag-dc.jpg" description="Figure 2. Block diagram of Direct-conversion receiver" %}
 
 ## Which one is better?
 

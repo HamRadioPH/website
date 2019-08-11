@@ -1,11 +1,12 @@
 ---
 layout: post
 title: First Look at Yaesu FT-3D
-date: 2019-08-10 5:00:00 +0800
-image: https://cdn.statically.io/gh/HamRadioPH/cdn/production/images/yaesu-ft-3d.jpg
+date: 2019-08-10 11:00:00 +0800
+image: /posts/yaesu-ft-3d-main.jpg
 description: Yaesu FT3D is the next flagship HT from a japanese manufacturer released this year.
 author: juan
 categories: [news]
+visibility: featured
 ---
 
 *Yaesu FT3D* is the next flagship HT from a japanese manufacturer released this year. It covers VHF/UHF and it features full colored touchscreen display, a Bluetooth and most features already present from FT2D.
@@ -37,7 +38,7 @@ Yaesu FT3D provides 5W RF power in a compact design with a form factor of *2.44 
 
 Yaesu FT3D is designed with a crisp high-resolution 320 x 240 full color dot matrixr TFT LCD display, it clearly highlights the frequency of the selected operational bands. It utilize a *touch sensitive screen* function of the display, it also has three one-touch-panel keys at the bottom of the display which are used for changing the operationall mode, direct frequency entry and various setting from the function menu display. With its full color display, its new high-resolution Band Scope function it  enables monitoring up to 79 channels centered around the current VFO frequency. The number of channels scanned can be selectable from 19, 39 or 79 channels. It retain the already popular Automatic Mode Select (AMS), Digital Group ID (DG-ID) operation, and Smart Navigation function which already a feature from previous model.
 
-{% include image.html url="https://cdn.statically.io/gh/HamRadioPH/cdn/production/images/yaesu-ft3d-side-.jpg" %}
+{% include image.html url="/posts/yaesu-ft-3d-front.jpg" %}
 
 The FT3D fully supports the WiRES-X Portable Digital Node Function just like the current C4FM transceivers, they can easily set up a portable digital node with the new FT3D and the optional SCU-39 cable kit and enjoy the WiRES-X Internet communication.
 
@@ -47,4 +48,4 @@ The built-in Bluetooth unit provide the Hands-Free Operation using the optional 
 
 ### Specification
 
-{% include image.html url="https://cdn.statically.io/gh/HamRadioPH/cdn/production/images/yaesu-ft-3d-specs.jpg" %}
+{% include image.html url="/posts/yaesu-ft-3d-specs.jpg" %}

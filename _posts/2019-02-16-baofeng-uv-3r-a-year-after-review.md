@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Baofeng UV-3R+ — a Year after Review
-date: 2019-02-16 12:00:00 +0300
-image: https://miro.medium.com/max/700/1*WKLYJOc7ID36Aq1qttfvoQ.jpeg
+date: 2019-02-26 11:00:00 +0800
+image: /posts/uv-3rplus-main.jpg
 description: Way back December 2016 on our club Christmas party, one of the price is a small radio. I was so curious since it is very small and portable. After searching for couple days i stumble upon Baofeng UV-3R.
 author: juan
 categories: [reviews]
@@ -13,16 +13,15 @@ Way back December 2016 on our club Christmas party, one of the price is a small 
 
 Baofeng UV-3R is a copy of Yaesu VX-3R. After a year they released UV-3R Mk II with little changes to the original one.
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2000/1*5RQAhZoyUcvLjIM1BpCgDw.png" description="Baofeng UV-3R MK I and Yaesu VX-3R" %}
+{% include image.html url="/posts/uv-3r-vx-3r.jpg" description="Baofeng UV-3R MK I and Yaesu VX-3R" %}
 
 Soon after the release of Mk II they released the latest and probably the last iteration of the UV-3R series, the UV-3R+
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2560/1*Q6wmb0HzNmMbG0omHD-Z2A.jpeg" description="Baofeng UV-3R series. Left to Right, MK I, II and Plus" %}
+{% include image.html url="/posts/uv-3r-series.jpeg" description="Baofeng UV-3R series. Left to Right, MK I, II and Plus" %}
 
 ## Specs
 
-
-{% include image.html url="https://cdn-images-1.medium.com/max/2000/1*LkYcioU8q7NkoISjKdnflQ.png" %}
+{% include image.html url="/posts/uv-3r-specs.jpg" %}
 
 Baofeng UV-3R+ is a complete redesign of its aesthetics, it doesnt resemble VX-3R anymore. It also uses a more updated firmware than the one from Mk I and II.
 
@@ -62,13 +61,13 @@ I have been using my UV-3R+ as my EDC (Everyday Carry) for more than 2 years alr
 
 Battery life is not really its strong point so i suggest getting a spare battery just in case, and the charger may require some careful use, mine is broken after a week. It still charges though just needed some careful push on the cable.
 
-{% include image.html url="https://cdn-images-1.medium.com/max/4096/1*WKLYJOc7ID36Aq1qttfvoQ.jpeg" description="Baofeng UV-3R+ with stock antenna and battery" %}
+{% include image.html url="/posts/uv-3rplus-main.jpg" description="Baofeng UV-3R+ with stock antenna and battery" %}
 
 ### Portability
 
 It is also comfortable to use, i can easily put it in my EDC bag or just on my pocket it fits perfectly. I usually used scanner antenna since i just monitor most of the time. The antenna is SMA-Female so you can interchanged it with any Baofeng antenna you already have. Just word of caution though if you are planning to TX, [always make sure to do SWR reading on the antenna before using it, if the SWR reading is high it could damage the finals of your radio. 1.0–1.5 is the ideal range.](/blogs/swr-for-dummies.html)
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2304/1*sBpD4FcBeCJwqYekmEohTw.jpeg" description="WLN KD-C1 and Baofeng UV-3R+" %}
+{% include image.html url="/posts/wln-kdc1-uv3rplus.jpg" description="WLN KD-C1 and Baofeng UV-3R+" %}
 
 ### TX/RX Performance
 
@@ -76,7 +75,7 @@ Well i don't expect it to perform well on TX since it has limited transmit power
 
 However, RX is excellent, i use a scanner antenna so it is really small and i can easily pick up transmission from our local traffic agency. Since i’m usually located in an area where there is high RF noise i’m really surprise that it still have a decent RX.
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2304/1*pVwIK4AGRmtrfICK8v8Khg.jpeg" description="SMA-F antenna that i used with UV-3R+ and all my SMA-F typed radios. (Left to Right) Bullet antenna, Short stubby antenna, Flexible stubby antenna, Stock antenna, Long stock antenna." %}
+{% include image.html url="/posts/uv3r-antenna.jpg" description="SMA-F antenna that i used with UV-3R+ and all my SMA-F typed radios. (Left to Right) Bullet antenna, Short stubby antenna, Flexible stubby antenna, Stock antenna, Long stock antenna." %}
 
 ## Verdict
 
