@@ -12,7 +12,6 @@ cdn_url: 'https://cdn.statically.io/gh/HamRadioPH/cdn/master'
 
 permalink: /:categories/:title:output_ext
 
-# Plugins
 plugins: 
   - jekyll-feed
   - jekyll-sitemap
