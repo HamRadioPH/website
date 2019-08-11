@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cignus UV-85+ HP — A year after review
-date: 2019-03-02 12:00:00 +0300
+date: 2019-03-02 11:00:00 +0800
 description: Ham is not a processed meat, it’s a person who is skilled in the Amateur Radio.
 image: https://cdn-images-1.medium.com/max/2000/1*doPOoge0M1TZ4DGH5zHR7Q.png
 description: This is the first radio that I bought upon recommendation from a ham friend, I got this radio from a local Cignus dealer for a 2,500 pesos.

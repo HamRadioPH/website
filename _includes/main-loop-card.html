@@ -14,7 +14,16 @@
 	{% if post.image %}
 	<div class="col-md-3 pr-0 text-right">
 		<a href="{{ post.url }}">
-			<img class="w-100" src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+			{% if page.image contains '://' %}
+				{% assign post_image = page.image %}
+			{% else %}
+				{% if site.cdn_url %}
+					{% assign post_image = site.cdn_url | append: page.image %}
+				{% else %}
+					{% assign post_image = page.image %}
+				{% endif %}
+			{% endif %}
+			<img class="w-100" src="{{ post_image }}" alt="{{ post.title }}">
 		</a>
 	</div>
 	{% endif %}

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: SWR for Dummies
-date: 2019-02-12 12:00:00 +0300
-image: https://miro.medium.com/max/700/1*AXq63Q6Yx5SNc3sB1VUsbw.jpeg
+date: 2019-02-12 11:00:00 +0800
+image: /posts/swr-for-dummies.jpg
 description: SWR stands for *Standing Wave Ratio*, its the ratio of how much output power reaches the antenna against what is reflected back.
 author: juan
 categories: [blogs]

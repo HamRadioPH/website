@@ -31,7 +31,16 @@ layout: default
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+					{% if page.image contains '://' %}
+						{% assign post_image = page.image %}
+					{% else %}
+						{% if site.cdn_url %}
+							{% assign post_image = site.cdn_url | append: page.image %}
+						{% else %}
+							{% assign post_image = page.image %}
+						{% endif %}
+					{% endif %}
+					<img class="rounded" src="{{ post_image }}" alt="{{ page.title }}">
 				</div>
                 {% endif %}
 			</div>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Look at Yaesu FT-3D
-date: 2019-08-10 5:00:00 +0800
+date: 2019-08-10 11:00:00 +0800
 image: https://cdn.statically.io/gh/HamRadioPH/cdn/production/images/yaesu-ft-3d.jpg
 description: Yaesu FT3D is the next flagship HT from a japanese manufacturer released this year.
 author: juan

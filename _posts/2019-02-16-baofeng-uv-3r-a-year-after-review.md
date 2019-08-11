@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Baofeng UV-3R+ — a Year after Review
-date: 2019-02-16 12:00:00 +0300
-image: https://miro.medium.com/max/700/1*WKLYJOc7ID36Aq1qttfvoQ.jpeg
+date: 2019-02-26 11:00:00 +0800
+image: /posts/uv-3rplus-main.jpg
 description: Way back December 2016 on our club Christmas party, one of the price is a small radio. I was so curious since it is very small and portable. After searching for couple days i stumble upon Baofeng UV-3R.
 author: juan
 categories: [reviews]
@@ -13,11 +13,11 @@ Way back December 2016 on our club Christmas party, one of the price is a small 
 
 Baofeng UV-3R is a copy of Yaesu VX-3R. After a year they released UV-3R Mk II with little changes to the original one.
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2000/1*5RQAhZoyUcvLjIM1BpCgDw.png" description="Baofeng UV-3R MK I and Yaesu VX-3R" %}
+{% include image.html url="/posts/uv-3r-vx-3r.png" description="Baofeng UV-3R MK I and Yaesu VX-3R" %}
 
 Soon after the release of Mk II they released the latest and probably the last iteration of the UV-3R series, the UV-3R+
 
-{% include image.html url="https://cdn-images-1.medium.com/max/2560/1*Q6wmb0HzNmMbG0omHD-Z2A.jpeg" description="Baofeng UV-3R series. Left to Right, MK I, II and Plus" %}
+{% include image.html url="/posts/uv-3r-series.jpeg" description="Baofeng UV-3R series. Left to Right, MK I, II and Plus" %}
 
 ## Specs
 

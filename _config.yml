@@ -3,9 +3,12 @@ name: 'Ham Philippines'
 description: 'Your ham radio radio resource in the Philippines'
 logo: '/assets/images/logo.png'
 favicon: '/assets/images/favicon.ico'
-baseurl: ''
+# baseurl: 'https://www.hamradioph.com' # Production
+# baseurl: 'https://staginghamph.netlify.com' # staging
+baseurl: '' # localhost
 email: 'hello@hamradioph.com'
 mailchimp-list: 'https://gmail.us3.list-manage.com/subscribe/post?u=d82df82a7f4aab50de85b52ec&amp;id=606977dfd1'
+cdn_url: 'https://cdn.statically.io/gh/HamRadioPH/cdn/master'
 
 include: ["_pages"]
 permalink: /:categories/:title:output_ext
